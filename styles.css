@@ -2,13 +2,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -19,24 +19,127 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
-}
-
-section {
-    padding: 2rem;
-    margin: 2rem 0;
+    font-weight: bold;
 }
 
 footer {
     text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: #fff;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#portfolio .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.project-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Fixer la barre de navigation en haut */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;  /* Fixer l'en-tête en haut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* S'assurer que le header est au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Ajoute une ombre pour le détacher du contenu */
+}
+
+/* Espacement pour que le contenu sous le header ne soit pas caché */
+body {
+    margin-top: 70px; /* Ajustez la valeur en fonction de la hauteur de votre header */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Styliser le titre pour qu'il soit bien visible comme un lien */
+header a h1 {
+    color: whitesmoke;
+    text-decoration: none ;  /* Supprime le soulignement par défaut */
+    font-size: 24px;  /* Ajustez la taille selon vos préférences */
 }
 
 
